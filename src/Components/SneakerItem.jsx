@@ -1,3 +1,5 @@
+import CustomerReview from '.'
+
 function SneakerItem({nom, marque, prix, style, esthetique, confort}){
     return(
         <div className="sneaker-item">
