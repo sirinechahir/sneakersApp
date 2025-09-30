@@ -44,11 +44,6 @@ function SneakerItem({sneakerData, onAddToCart }) {
                         </button>
                     </div>
 
-                    <div className="sneaker-actions">
-                        <button onClick={handleRemoveFromCart} className="">
-                            🛒 Supprimer du panier
-                        </button>
-                    </div>
             </div>
         </div>
     );

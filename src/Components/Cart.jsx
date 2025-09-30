@@ -46,10 +46,7 @@ function Cart({ cartItems }) {
 };
 
 
-function removeFromCart(onRemoveFromCart){
-    
 
-};
 
 
 export default Cart;
