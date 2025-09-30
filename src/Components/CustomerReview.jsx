@@ -1,3 +1,5 @@
+import "../styles/CustomerReview.css"
+
 function CustomerReview ({scaleValue, reviewType}){
     const range=[1, 2, 3, 4, 5]
     const scaleType=reviewType === 'confort' ? '😌': '💖'
@@ -15,3 +17,4 @@ function CustomerReview ({scaleValue, reviewType}){
         </div>
     )
 }
+export default CustomerReview;

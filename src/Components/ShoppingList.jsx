@@ -1,7 +1,8 @@
-import {sneakersList} from '../datas/sneakersList'
-import SneakerItem from './SneakerItem';
+import {sneakersList} from '../datas/sneakersList.js'
+import '../styles/ShoppingList.css';
+import SneakerItem from './SneakerItem.jsx'
 
-function ShoppingList(){
+function ShoppingList({onAddToCart}){
     return (
         <div className="shopping-list">
             <h2>Nos sneakers</h2>
@@ -9,17 +10,13 @@ function ShoppingList(){
                 {sneakersList.map((sneaker) => (
                     <SneakerItem
                         key={sneaker.id}
-                        nom={sneaker.nom}
-                        marque={sneaker.marque}
-                        prix={sneaker.prix}
-                        style={sneaker.style}
-                        esthetique={sneaker.esthetique}
-                        confort={sneaker.confort}
-                    />
+                        sneakerData={sneaker}
+                        onAddToCart={onAddToCart}
+                />
              ))}
             </div>
         </div>
     );
 }
 
-export default ShoppingList
+export default ShoppingList;

@@ -1,25 +1,27 @@
-.banner{
-    display: flex; /*aligner logo et contenu*/
+.banner {
+    display: flex; /* aligner logo et contenu */
     align-items: center;
-    justify-content: space-between; /*espace entre logo et contenu*/
-    padding: 5px 40px; 
+    justify-content: space-between; /* espace entre logo et contenu */
+    padding: 20px 60px; /* agrandi le banner */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* optionnel : arrondir un peu le banner */
 }
 
-/*style du logo à gauche */
-
-.banner-logo{
-    height: 90px;
+/* style du logo à gauche */
+.banner-logo {
+    height: 120px; /* agrandi (avant 90px) */
     width: auto;
-    border-radius: 8px;
-    box-shadow:0 2px 4px rgba(0, 0, 0, 0.2)
+    background: rgba(255, 255, 255, 0.15); /* carré visible mais transparent */
+    padding: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px); /* effet verre dépoli */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-/*conteneur du texte à droite*/
-
-.banner-content{
+/* conteneur du texte à droite */
+.banner-content {
     text-align: right;
     flex-grow: 1;
 }
@@ -30,9 +32,9 @@
     font-weight: bold;
 }
 
-.banner-content p{
-    margin:0 0 8px 0;
-    font-size:1.5rem;
-    opacity:0,7;
+.banner-content p {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    opacity: 0.7;
     font-style: italic;
 }
