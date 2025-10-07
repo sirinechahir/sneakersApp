@@ -1,4 +1,3 @@
-import React from "react";
 import Menu from "./Menu";
 
 function Cart({ cartItems, onRemoveFromCart, onClearCart }) {
