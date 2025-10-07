@@ -2,12 +2,12 @@
     display: flex; /* aligner logo et contenu */
     align-items: center;
     justify-content: space-between; /* espace entre logo et contenu */
-    padding: 20px 60px; /* agrandi le banner */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px 50px; /* agrandi le banner */
+    background: linear-gradient(135deg, #98eaf5 , #47a3af /*#8695d8 0%, #121069 100%*/);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 12px; /* optionnel : arrondir un peu le banner */
 }
+
 
 /* style du logo à gauche */
 .banner-logo {

@@ -1,13 +1,34 @@
+.App {
+  text-align: left;
+}
+
+/* ✅ zone sous le banner */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+
+.main-section > .ShoppingList {
+  flex: 1;
+}
+ 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+ 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+ 
 
 .App-header {
   background-color: #282c34;
@@ -20,9 +41,12 @@
   color: white;
 }
 
+ 
 .App-link {
   color: #61dafb;
 }
+
+ 
 
 @keyframes App-logo-spin {
   from {
@@ -32,3 +56,69 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+.cart {
+  width: 300px;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+ 
+.cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.remove-item-btn,
+.clear-cart-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+
+
+.clear-cart-btn {
+    margin-top: 1rem;
+    background-color: #cc0000;
+}
+
+.cart-page-container {
+    width: 600px;
+    margin: 20px auto; /* centre la page */
+}
+
+.menu {
+    margin-bottom: 20px; /* espace entre menu et panier */
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.cart-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+
+
+

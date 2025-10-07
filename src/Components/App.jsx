@@ -6,9 +6,8 @@ import '../styles/App.css';
 
 
 function App() {
-
-  const [cart, setCart] = useState(() =>{
-    const savedCart=localStorage.getItem('cart');
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem('cart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
@@ -16,28 +15,62 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart=(sneaker) =>{
-    setCart(prevCart => {
-      const existingItem=prevCart.find(item=>item.id === sneaker.id);
+  const addToCart = (sneaker) => {
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === sneaker.id);
 
-      if (existingItem){
-        return prevCart.map(item=>
+      if (existingItem) {
+        return prevCart.map((item) =>
           item.id === sneaker.id
-            ?{...item, quantity: item.quantity + 1}
+            ? { ...item, quantity: item.quantity + 1 }
             : item
         );
-      }else {
-        return[...prevCart, {...sneaker, quantity: 1}];
+      } else {
+        return [...prevCart, { ...sneaker, quantity: 1 }];
       }
-    })
-  }
+    });
+  };
+
+
+
+const removeFromCart = (id) => {
+  setCart((prevCart) =>
+    prevCart
+      .map((item) => {
+        if (item.id === id) {
+          if (item.quantity > 1) {
+            return { ...item, quantity: item.quantity - 1 };
+          }
+          return null;
+        }
+        return item;
+      })
+      .filter((item) => item !== null) 
+  );
+};
+
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <div className="App">
       <Banner />
-      <ShoppingList onAddToCart={addToCart}/>
-      <Cart cartItems={cart}/>
+
+      {/* ✅ Conteneur flex horizontal sous le banner */}
+      <div className="main-section">
+        <ShoppingList onAddToCart={addToCart} />
+        <Cart
+          cartItems={cart}
+          onRemoveFromCart={removeFromCart}
+          onClearCart={clearCart}
+        />
+      </div>
     </div>
   );
 }
+
+
 
 export default App;

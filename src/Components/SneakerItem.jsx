@@ -29,7 +29,7 @@ function SneakerItem({sneakerData, onAddToCart }) {
             <p className="sneaker-style">{style}</p>
 
             <div className='sneaker-review'>
-                <button onClick={handleToggleAvis}>
+                <button  className="voir-avis" onClick={handleToggleAvis}>
                     {showReviews ? 'Masquer les avis' : 'Voir les avis'}
                     </button>
                     {showReviews && (

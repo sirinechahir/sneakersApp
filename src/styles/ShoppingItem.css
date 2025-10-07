@@ -108,9 +108,66 @@
 }
 
 
-.avis-details{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 10px;
+
+
+
+.voir-avis {
+    background: linear-gradient(145deg, #98eaf5, #47a3af ); /* dégradé de couleur */
+    color: white;
+    border: none;
+    border-radius: 12px; /* coins arrondis */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ombre légère */
+    transition: all 0.3s ease; /* transition pour hover */
 }
+
+
+
+
+.voir-avis:hover{
+      background: linear-gradient(145deg, #71dbd6, #53ca8e); /* changement de couleur au hover */
+    transform: scale(1.05); /* léger effet de zoom */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* ombre plus prononcée */
+}
+
+.voir-avis:active{
+      transform: scale(0.98); /* effet clic */
+
+}
+
+
+.add-to-cart-btn {
+    background: linear-gradient(145deg, #98eaf5, #47a3af ); /* dégradé de couleur */
+    color: white;
+    border: none;
+    border-radius: 12px; /* coins arrondis */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ombre légère */
+    transition: all 0.3s ease; /* transition pour hover */
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(145deg, #71dbd6, #53ca8e); /* changement de couleur au hover */
+    transform: scale(1.05); /* léger effet de zoom */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* ombre plus prononcée */
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.98); /* effet clic */
+}
+
+
+.avis-details {
+    display: flex;
+    flex-direction: column; /* colonne au lieu de ligne */
+    gap: 12px; /* espace entre les avis */
+    margin-top: 10px;
+}
+
+

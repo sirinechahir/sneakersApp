@@ -1,4 +1,4 @@
-import logo from "../assets/logosneaker.png";
+import logo from "../assets/logo.png";
 import "../styles/Banner.css";
 
 function Banner(){
@@ -8,7 +8,7 @@ function Banner(){
 
             <div className="banner-content">
 
-                <h1>STORE × SNEAKER SIRINE</h1>
+                <h1>SNEAKER.SC x STORE</h1>
 
                 <p>Chaque paire raconte une histoire. La tienne commence ici.</p>
             </div>
