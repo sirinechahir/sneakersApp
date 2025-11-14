@@ -5,7 +5,7 @@ import SneakerItem from './SneakerItem.jsx'
 function ShoppingList({onAddToCart}){
     return (
         <div className="shopping-list">
-            <h2>Nos sneakers</h2>
+            <h2>Nos Sneakers</h2>
             <div className="sneakers-grid">
                 {sneakersList.map((sneaker) => (
                     <SneakerItem

@@ -1,11 +1,13 @@
+/* =========================================
+   Styles généraux des sneakers
+========================================= */
+
 .sneaker-item {
   position: relative;
-  /* Nécessaire pour le positionnement du badge */
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  /* Réduit de 20px à 15px */
   transition: all 0.3s ease;
   border: 1px solid #e5e7eb;
   width: 100%;
@@ -18,17 +20,12 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Style pour les images de sneakers */
 .sneaker-image {
   width: 80%;
-  /* Réduit de 100% à 80% */
   height: 140px;
-  /* Réduit de 160px à 140px */
   border-radius: 8px;
   margin: 0 auto 12px auto;
-  /* Centre l'image */
   object-fit: cover;
-  /* Pour que l'image garde ses proportions */
   display: block;
 }
 
@@ -48,14 +45,12 @@
   font-size: 1rem;
 }
 
-/* Prix en vert */
 .sneaker-price {
   color: #059669;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-/* Style comme un badge */
 .sneaker-style {
   background: #f3f4f6;
   color: #374151;
@@ -67,27 +62,25 @@
   margin: 6px 0;
 }
 
-/* Section des avis */
 .sneaker-review {
   border-top: 1px solid #e5e7eb;
   padding-top: 12px;
   margin-top: 12px;
 }
 
-.sneaker-review>div {
+.sneaker-review > div {
   margin: 6px 0;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-
-/* Style de base pour chaque sneaker item */
+/* Badges */
 .best-seller-badge {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: #ff4444;
+  background: #f0bb6c;
   color: white;
   padding: 4px 8px;
   border-radius: 12px;
@@ -96,78 +89,173 @@
 }
 
 .sneaker-item.best-seller {
-  border: 2px solid gold;
+  border: 2px solid #f0bb6c;
   box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
   transform: translateY(-2px);
 }
 
-/* Hover spécifique pour les best-sellers */
 .sneaker-item.best-seller:hover {
   transform: translateY(-7px);
   box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
 }
 
+/* =========================================
+   Boutons Voir Avis et Ajouter au panier - Version centrée et compacte
+========================================= */
 
-
-
-
-.voir-avis {
-    background: linear-gradient(145deg, #98eaf5, #47a3af ); /* dégradé de couleur */
-    color: white;
-    border: none;
-    border-radius: 12px; /* coins arrondis */
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ombre légère */
-    transition: all 0.3s ease; /* transition pour hover */
-}
-
-
-
-
-.voir-avis:hover{
-      background: linear-gradient(145deg, #71dbd6, #53ca8e); /* changement de couleur au hover */
-    transform: scale(1.05); /* léger effet de zoom */
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* ombre plus prononcée */
-}
-
-.voir-avis:active{
-      transform: scale(0.98); /* effet clic */
-
-}
-
-
+.voir-avis,
 .add-to-cart-btn {
-    background: linear-gradient(145deg, #98eaf5, #47a3af ); /* dégradé de couleur */
-    color: white;
-    border: none;
-    border-radius: 12px; /* coins arrondis */
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ombre légère */
-    transition: all 0.3s ease; /* transition pour hover */
+  display: block;               /* pour centrer horizontalement */
+  margin: 10px auto;            /* centre horizontalement */
+  border: none;
+  border-radius: 12px;          /* coins arrondis */
+  padding: 6px 14px;            /* bouton un peu plus petit */
+  font-size: 13px;              /* texte légèrement plus petit */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Bouton Voir Avis */
+.voir-avis {
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px solid #d1d5db;
+}
+
+.voir-avis:hover {
+  background: #f3f4f6;
+  color: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.voir-avis:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Bouton Ajouter au panier */
+.add-to-cart-btn {
+  background: #f3f4f6;
+  color: #374151;
+    border: 2px solid #d1d5db;
+
 }
 
 .add-to-cart-btn:hover {
-    background: linear-gradient(145deg, #71dbd6, #53ca8e); /* changement de couleur au hover */
-    transform: scale(1.05); /* léger effet de zoom */
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* ombre plus prononcée */
+  background: #f3f4f6;
+  color: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
 .add-to-cart-btn:active {
-    transform: scale(0.98); /* effet clic */
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
+/* =========================================
+   Styles Panier (+, −, Retirer)
+========================================= */
+
+.cart-page-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 15px;
+}
+
+.cart-block {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cart-block h2 {
+  margin-bottom: 15px;
+}
+
+.cart-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-block li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-block img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.cart-block button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.cart-block .add-item-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cart-block .remove-item-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.cart-block .clear-cart-btn {
+  background-color: #333;
+  color: white;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Boutons + et − circulaires */
+.cart-block button.add-item-btn,
+.cart-block button.remove-item-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-block button:hover {
+  opacity: 0.9;
+}
+
+/* Total */
+.cart-block p {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* =========================================
+   Avis détails
+========================================= */
 
 .avis-details {
-    display: flex;
-    flex-direction: column; /* colonne au lieu de ligne */
-    gap: 12px; /* espace entre les avis */
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
 }
-
-

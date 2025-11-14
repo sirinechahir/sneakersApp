@@ -1,40 +1,80 @@
 .banner {
-    display: flex; /* aligner logo et contenu */
+    display: flex;
     align-items: center;
-    justify-content: space-between; /* espace entre logo et contenu */
-    padding: 10px 50px; /* agrandi le banner */
-    background: linear-gradient(135deg, #98eaf5 , #47a3af /*#8695d8 0%, #121069 100%*/);
+    justify-content: space-between;
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #593cc0,#3b5df7, #347abb, #8ed3df); /* violet → rose → orange */
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-/* style du logo à gauche */
+/* logo à gauche */
 .banner-logo {
-    height: 120px; /* agrandi (avant 90px) */
-    width: auto;
-    background: rgba(255, 255, 255, 0.15); /* carré visible mais transparent */
-    padding: 12px;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
     border-radius: 12px;
-    backdrop-filter: blur(6px); /* effet verre dépoli */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease;
 }
 
-/* conteneur du texte à droite */
+.banner-logo:hover {
+    transform: scale(1.05);
+}
+
+/* contenu à droite */
 .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: right;
     flex-grow: 1;
 }
 
+/* titre principal */
 .banner-content h1 {
-    margin: 0 0 8px 0;
-    font-size: 2.8rem;
-    font-weight: bold;
+    margin: 8px 0 6px 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* sous-texte */
 .banner-content p {
-    margin: 0 0 8px 0;
-    font-size: 1.5rem;
-    opacity: 0.7;
+    margin: 0;
+    font-size: 1.2rem;
     font-style: italic;
+    opacity: 0.85;
+    line-height: 1.4;
+    max-width: 400px;
+}
+
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.cart-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  font-weight: bold;
 }

@@ -1,5 +1,6 @@
 import logo from "../assets/logo.png";
 import "../styles/Banner.css";
+import Menu from "./Menu";
 
 function Banner(){
     return (
@@ -7,12 +8,14 @@ function Banner(){
             <img src={logo} className="banner-logo" alt="Logo Sneakers"/>
 
             <div className="banner-content">
+                <Menu />
 
                 <h1>SNEAKER.SC x STORE</h1>
 
-                <p>Chaque paire raconte une histoire. La tienne commence ici.</p>
+                <p>À chaque pas, ton histoire. </p>
             </div>
         </header>
     );
 }
 export default Banner;
+

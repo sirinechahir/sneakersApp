@@ -2,7 +2,6 @@
   text-align: left;
 }
 
-/* ✅ zone sous le banner */
 .main-section {
   display: flex;
   justify-content: space-between;
@@ -92,6 +91,17 @@
     margin-left: 1rem;
 }
 
+.add-item-btn,
+.clear-cart-btn {
+    background-color: #8ed3df;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
 
 
 .clear-cart-btn {
@@ -104,21 +114,10 @@
     margin: 20px auto; /* centre la page */
 }
 
-.menu {
-    margin-bottom: 20px; /* espace entre menu et panier */
-    background-color: #f5f5f5;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
 .cart-block {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
-
-
-
 
